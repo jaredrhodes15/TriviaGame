@@ -12,7 +12,7 @@ $(document).on("click", "#startButton", function(event){
   var questions = [{
       question: "Who was Zach Morris' gilfriend?",
       answers: ["Tori", "Kelly", "Jessie", "Lisa"],
-      correstAnswer: "Kelly"
+      correctAnswer: "Kelly"
       
   }, {
       question: "Who was the principal of the highschool?",
@@ -63,7 +63,7 @@ var game = {
     },
   //When done is clicked, check the answers and tally them for display
     done: function() {
-
+ 
         $.each($("input[name='question-0']:checked"), function() {
             if ($(this).val() == questions[0].correctAnswer) {
                 console.log(this);
