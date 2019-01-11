@@ -5,7 +5,8 @@ $(document).on("click", "#startButton", function(event){
     game.start();
   });
   
-  $(document).on("click", "#finishButton", function(event){
+
+$(document).on("click", "#done", function(event){
     game.done();
   });
 
@@ -30,14 +31,14 @@ $(document).on("click", "#startButton", function(event){
 var game = {
     correct: 0,
     incorrect: 0,
-    timer: 10,
+    timer: 20,
 
     countdown: function() {
         game.timer--;
         $("#timer-number").html(game.timer);
 
         if (game.timer === 0) {
-            alert("You ran out of time! Answer faster!");
+            alert("You ran out of time and were late to class! Answer faster!");
             game.done();
         
 
@@ -110,4 +111,3 @@ var game = {
       }
 
 };
-
